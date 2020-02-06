@@ -6,6 +6,7 @@ Python Template for managing database
 * Pydantic Model Validation
 * Asyncio Model management
 * Github Model deployment
+* Alembic DataBase migration
 
 
 ## Usage
