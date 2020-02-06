@@ -2,7 +2,9 @@
 Python Template for managing database
 
 ## Features
-* Pydantic Model generation
+* Vscode container integration
+* Pydantic Model Validation
+* Asyncio Model management
 * Github Model deployment
 
 
