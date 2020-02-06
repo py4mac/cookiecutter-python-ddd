@@ -27,3 +27,4 @@ jobs:
       run: |
         export CODECOV_TOKEN=${{ secrets.CODECOV_TOKEN }}
         make test
+        codecov

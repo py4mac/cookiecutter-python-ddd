@@ -72,6 +72,8 @@ pytest = "*"
 pytest-cov = "*"
 pytest-asyncio = "*"
 coverage = "*"
+coveralls = "*"
+codecov = "*"
 
 # Static
 isort = "*"
