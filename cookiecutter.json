@@ -1,0 +1,8 @@
+{
+    "app_name": "example_web_app",
+    "app_version": "0.0.1",
+    "experiment_storage_uri": "postgresql://postgres:admin@192.168.1.171:5432/app",
+    "_copy_without_render": [
+        ".github/workflows/**"
+    ]
+}

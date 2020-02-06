@@ -1,0 +1,27 @@
+site_name: {{cookiecutter.app_name}}
+site_description: {{cookiecutter.app_name}}
+site_url: https://github.com/py4mac/{{cookiecutter.app_name}}
+
+theme:
+    name: 'material'
+    palette:
+      primary: 'teal'
+      accent: 'amber'
+    logo: 'img/icon-white.svg'
+    favicon: 'img/favicon.png'
+
+repo_name: py4mac/{{cookiecutter.app_name}}
+repo_url: https://github.com/py4mac/{{cookiecutter.app_name}}
+edit_uri: ''
+
+nav:
+    - Main: 'index.md'
+
+markdown_extensions:
+  - markdown.extensions.codehilite:
+      guess_lang: false
+  - markdown_include.include:
+      base_path: docs
+  - admonition
+  - codehilite
+  - extra

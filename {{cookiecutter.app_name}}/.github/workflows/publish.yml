@@ -1,0 +1,29 @@
+name: Publish
+on:
+  push:
+    tags:
+    - *.*
+
+jobs:
+  test:
+    name: Test on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+    steps:
+    - uses: actions/checkout@v1
+    - name: Set up Python 3.x
+      uses: actions/setup-python@v1
+      with:
+        python-version: '3.x'
+    - name: Install Python 3.x dependencies
+      run: |
+        python3 -m pip install --upgrade pip
+        python3 -m pip install -r requirements.txt
+    - name: Build
+      run: |
+        python3 -m poetry build
+    - name: Publish
+      run: |
+        python3 -m poetry publish -u ${{ secrets.PYPI_USER }} -p ${{ secrets.PYPI_PWD }}

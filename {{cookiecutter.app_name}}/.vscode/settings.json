@@ -1,0 +1,28 @@
+{
+    "python.pythonPath": "/workspaces/{{cookiecutter.app_name}}/.venv/bin/python3",
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true,
+    "python.linting.enabled": true,
+    "python.linting.mypyEnabled": true,
+    "python.testing.unittestArgs": [
+        "-v",
+        "-s",
+        "./tests",
+        "-p",
+        "test_*.py"
+    ],
+    "python.testing.pytestEnabled": true,
+    "python.testing.nosetestsEnabled": false,
+    "python.testing.unittestEnabled": true,
+    "python.formatting.provider": "black",
+    "python.formatting.blackArgs": [
+        "--line-length=150"
+    ],
+    "editor.formatOnSave": true,
+    "remote.WSL.fileWatcher.polling": true,
+    "workbench.editor.enablePreview": false,
+    "python.envFile": "${workspaceFolder}/.env",
+    "search.exclude": {
+        "**/.venv": true
+    }
+}
