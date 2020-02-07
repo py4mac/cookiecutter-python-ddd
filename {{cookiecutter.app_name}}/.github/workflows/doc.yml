@@ -1,5 +1,8 @@
 name: Build and Deploy
-on: [push]
+on:
+  create:
+    tags:
+      - v*
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -9,7 +12,7 @@ jobs:
     - name: Set up Python 3.x
       uses: actions/setup-python@v1
       with:
-        python-version: '3.x'
+        python-version: '3.7'
     - name: Install Python 3.x dependencies
       run: |
         python3 -m pip install --upgrade pip
@@ -17,6 +20,7 @@ jobs:
     - name: Build Mkdocs
       run: |
         python3 -m mkdocs build
+        cp CNAME ./site/CNAME
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v2
       env:
